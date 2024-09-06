@@ -1,0 +1,18 @@
+source "${ZEPHYR_BASE}/share/sysbuild/Kconfig"
+
+choice REMOTE_BOARD
+	prompt "Remote board selection"
+	default REMOTE_BOARD_CPURAD
+
+config REMOTE_BOARD_CPURAD
+	bool "cpurad"
+
+config REMOTE_BOARD_CPUPPR
+	bool "cpuppr"
+
+endchoice
+
+config REMOTE_BOARD_NAME
+	string
+	default "nrf54h20dk/nrf54h20/cpurad" if REMOTE_BOARD_CPURAD
+	default "nrf54h20dk/nrf54h20/cpuppr" if REMOTE_BOARD_CPUPPR
