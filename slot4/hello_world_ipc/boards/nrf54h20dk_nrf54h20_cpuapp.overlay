@@ -1,0 +1,19 @@
+ipc1: &cpuapp_cpuppr_ipc {
+	status = "okay";
+};
+
+&cpuppr_vevif {
+	status = "okay";
+};
+
+&cpuppr_ram3x_region {
+	status = "okay";
+};
+
+&uart135 {
+	status = "disabled";
+};
+
+&cpuppr_vpr {
+	status = "okay";
+};
